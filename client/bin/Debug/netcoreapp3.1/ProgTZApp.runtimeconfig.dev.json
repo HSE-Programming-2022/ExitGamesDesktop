@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\kiryu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\kiryu\\.nuget\\packages",
+      "E:\\SDK\\NuGetPackages"
+    ]
+  }
+}
