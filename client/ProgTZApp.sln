@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgTZApp", "ProgTZApp\ProgTZApp.csproj", "{DFE0D703-5ED8-4DAE-BB25-04CED6D5B22E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TzClasses", "TzClasses\TzClasses.csproj", "{6FA3FD99-0CC7-4325-B935-907EE53C5879}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFE0D703-5ED8-4DAE-BB25-04CED6D5B22E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE0D703-5ED8-4DAE-BB25-04CED6D5B22E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE0D703-5ED8-4DAE-BB25-04CED6D5B22E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE0D703-5ED8-4DAE-BB25-04CED6D5B22E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA3FD99-0CC7-4325-B935-907EE53C5879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA3FD99-0CC7-4325-B935-907EE53C5879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA3FD99-0CC7-4325-B935-907EE53C5879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA3FD99-0CC7-4325-B935-907EE53C5879}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1375B37D-EA13-402F-ABD9-E38B8EDC31AB}
+	EndGlobalSection
+EndGlobal
