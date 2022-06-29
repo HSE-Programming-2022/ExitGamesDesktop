@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\loading-no-bg.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.3.0" />
+    <PackageReference Include="Infragistics.WPF.Spreadsheet.Trial" Version="22.1.40" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Spire.XLS" Version="12.6.1" />
+    <PackageReference Include="Spread.Services" Version="1.4.0" />
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TzClasses\TzClasses.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\loading-no-bg.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="excel\fileGood.xlsx">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="images\login-icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

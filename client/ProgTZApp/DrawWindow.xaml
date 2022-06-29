@@ -1,0 +1,125 @@
+﻿<Window x:Class="ProgTZApp.DrawWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgTZApp" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="ExitGames" Height="450" Width="800" MinHeight="450" MinWidth="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Border
+            x:Name="BorderExitButton"
+            BorderThickness="1"
+            Background="Gray"
+            CornerRadius="15"
+            Width="auto"
+            Height="auto"
+            MinHeight="30"
+            MinWidth="100"
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Grid.Row="0"
+            Grid.Column="2"
+            Margin="150 0 10 20">
+            <Button x:Name="ExitButton" Grid.Row="0" Grid.Column="2" Width="auto" Height="auto" MinHeight="30" MinWidth="100" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Выйти" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Foreground="White" FontSize="15" FontWeight="UltraBold" Click="ExitButton_Click" />
+        </Border>
+
+        <TextBlock Name="ModeTextBlock" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Margin="20">Выберите режим:</TextBlock>
+        <RadioButton Name ="WorkdayRaioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Будние" Margin="15" Click="WorkdayRaioButton_Click" IsChecked="True" />
+        <RadioButton Name ="WeekendRaioButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Выходные" Margin="15"  Click="WeekendRaioButton_Click" />
+        <TextBlock Name="MainDateTextBlock" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15"  Margin="20">Выберите дату:</TextBlock>
+        <DatePicker Name="MainDatePicker" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20"/>
+        <TextBlock Name="CreateParamsNameTextBlock" Height="auto" Width="auto" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="0 10">Имя аниматора:</TextBlock>
+        <TextBox Name="CreateParamsNameTextBox" Height="auto" Width="auto" MinWidth="150" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Margin="0 10"/>
+        <TextBlock Name="WeekendsStartTextBlock" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15"  Margin="20">Начало дня:</TextBlock>
+        <xctk:TimePicker Name="WeekendsStartTimePicker" Width="100" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20"/>
+        <TextBlock Name="WeekendsEndTextBlock" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Margin="20">Конец дня:</TextBlock>
+        <xctk:TimePicker Name="WeekendsEndTimePicker" Width="100" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20"/>
+
+        <Border
+            x:Name="BorderAddCreateParamsButton"
+            BorderThickness="1"
+            Background="LimeGreen"
+            CornerRadius="15"
+            Width="auto"
+            Height="auto"
+            MinHeight="30"
+            MinWidth="200"
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Center" 
+            Grid.Row="4"
+            Grid.Column="0"
+            Margin="0 5">
+            <Button x:Name="AddCreateParamsButton" Grid.Row="4" Grid.Column="0" Content="Добавить аниматора" Width="180" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Foreground="White" FontSize="15" FontWeight="UltraBold" Click="AddCreateParamsButton_Click" />
+        </Border>
+
+        <Border
+            x:Name="BorderDeleteCreateParamsButton"
+            BorderThickness="1"
+            Background="Orange"
+            CornerRadius="15"
+            Width="auto"
+            Height="auto"
+            MinHeight="30"
+            MinWidth="200"
+            VerticalAlignment="Bottom" 
+            HorizontalAlignment="Center" 
+            Grid.Row="4"
+            Grid.Column="0"
+            Margin="0 5">
+            <Button x:Name="DeleteCreateParamsButton" Grid.Row="4" Grid.Column="0" Content="Удалить аниматора" Width="180" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Foreground="White" FontSize="15" FontWeight="UltraBold" Click="DeleteCreateParamsButton_Click" />
+        </Border>
+
+        <ListBox Name="CreateParamssListBox" Grid.Row="4" Grid.Column="1" Height="auto" Width="auto" Background="AliceBlue">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Name="CreateParamsNameLBTextBlock" Margin="2" Grid.Column="0" Initialized="CreateParamsNameLBTextBlock_Initialized">Имя Аниматора</TextBlock>
+                        <TextBlock Name="StartTimeLBTextBlock" Margin="2" Grid.Column="1" Initialized="StartTimeLBTextBlock_Initialized">00:00</TextBlock>
+                        <TextBlock Name="EndTimeLBTextBlock" Margin="2" Grid.Column="2" Initialized="EndTimeLBTextBlock_Initialized">10:00</TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            
+        </ListBox>
+
+        <Border
+            x:Name="BorderCreateGrpahButton"
+            BorderThickness="1"
+            Background="#00ad39"
+            CornerRadius="15"
+            Width="auto"
+            Height="auto"
+            MinHeight="30"
+            MinWidth="150"
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Grid.Row="5"
+            Grid.Column="1">
+            <Button x:Name="CreateGrpahButton" Grid.Column="1" Grid.Row="5" Width="auto" Height="auto" Content="Создать график" BorderThickness="0" BorderBrush="Transparent" Background="Transparent" Foreground="White" FontSize="15" FontWeight="UltraBold" Click="CreateGrpahButton_Click"></Button>
+        </Border>
+
+    </Grid>
+</Window>

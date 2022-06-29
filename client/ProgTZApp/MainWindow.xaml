@@ -1,0 +1,82 @@
+﻿<Window x:Class="ProgTZApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgTZApp"
+        mc:Ignorable="d"
+        Title="ExitGames" Height="480" Width="800" MinHeight="480" MinWidth="800" MaxHeight="480" MaxWidth="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Image Name="BorderWaveTop" Source="images/border-wave-top.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1"/>
+
+        <Image Name="LogoImage" Source="images/logo.png" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="130" Width="130" MinHeight="130" MinWidth="130" Margin="5"/>
+
+        <TextBlock Name="LoginTextBlock" Grid.Row="2" Height="auto" Width="auto" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Введите логин:" Margin="5"/>
+
+        <Border
+            x:Name="BorderLoginTextBox"
+            BorderThickness="1" 
+            Background="Transparent"
+            BorderBrush="DarkGray" 
+            CornerRadius="10"
+            Height="auto"
+            Width="auto"
+            MinWidth="220"
+            MinHeight="22"
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Grid.Row="3"
+            Margin="5">
+            <TextBox x:Name="LoginTextBox" Height="auto" Width="auto" MinHeight="20" MinWidth="200" MaxHeight="20" MaxWidth="200" VerticalAlignment="Center" HorizontalAlignment="Right" BorderThickness="0" BorderBrush="Transparent" Background="Transparent"/>
+        </Border>
+
+        <TextBlock Name="PasswordTextBlock" Grid.Row="4" Height="auto" Width="auto" VerticalAlignment="Bottom" HorizontalAlignment="Center"  Text="Введите пароль:" Margin="5"/>
+
+        <Border
+            x:Name="BorderPasswordTextBox"
+            BorderThickness="1"
+            BorderBrush="DarkGray" 
+            CornerRadius="10"
+            Height="auto"
+            Width="auto"
+            MinWidth="220"
+            MinHeight="22"
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Grid.Row="5"
+            Margin="5">
+            <PasswordBox Name="PassPasswordBox" Height="auto" Width="auto" MinHeight="20" MinWidth="200" MaxHeight="20" MaxWidth="200" VerticalAlignment="Center" HorizontalAlignment="Right" BorderThickness="0" BorderBrush="Transparent" Background="Transparent"/>
+        </Border>
+
+        <Border
+            x:Name="BorderLoginButton"
+            BorderThickness="1"
+            Background="#00ad39"
+            CornerRadius="15"
+            Height="auto"
+            Width="auto"
+            MinWidth="120"
+            MinHeight="35"
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Grid.Row="6"
+            Margin="25">
+            <Button Name="LoginButton" Height="auto" Width="auto" MinHeight="30" MinWidth="100" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Войти" Background="#00ad39" BorderThickness="0" BorderBrush="Transparent" Foreground="White" FontSize="15" FontWeight="UltraBold" Click="LoginButton_Click"/>
+        </Border>
+
+        <Image Name="LoginIcon" Source="images/login-icon.png" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Height="15" Width="15" MinHeight="15" MinWidth="15" Margin="0 0 200 0"/>
+        <Image Name="PassIcon" Source="images/password-icon.png" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="5" Height="15" Width="15" MinHeight="15" MinWidth="15" Margin="0 0 200 0"/>
+    </Grid>
+</Window>
