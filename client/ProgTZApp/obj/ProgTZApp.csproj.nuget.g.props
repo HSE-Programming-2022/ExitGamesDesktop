@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\kiryu\.nuget\packages\;E:\SDK\NuGetPackages</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.2.1</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\kiryu\.nuget\packages\" />
+    <SourceRoot Include="E:\SDK\NuGetPackages\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgInfragistics_WPF_Trial Condition=" '$(PkgInfragistics_WPF_Trial)' == '' ">C:\Users\kiryu\.nuget\packages\infragistics.wpf.trial\22.1.40</PkgInfragistics_WPF_Trial>
+    <PkgInfragistics_WPF_Menus_Trial Condition=" '$(PkgInfragistics_WPF_Menus_Trial)' == '' ">C:\Users\kiryu\.nuget\packages\infragistics.wpf.menus.trial\22.1.40</PkgInfragistics_WPF_Menus_Trial>
+    <PkgInfragistics_WPF_Editors_Trial Condition=" '$(PkgInfragistics_WPF_Editors_Trial)' == '' ">C:\Users\kiryu\.nuget\packages\infragistics.wpf.editors.trial\22.1.40</PkgInfragistics_WPF_Editors_Trial>
+    <PkgInfragistics_WPF_DataVisualization_Trial Condition=" '$(PkgInfragistics_WPF_DataVisualization_Trial)' == '' ">C:\Users\kiryu\.nuget\packages\infragistics.wpf.datavisualization.trial\22.1.40</PkgInfragistics_WPF_DataVisualization_Trial>
+    <PkgInfragistics_WPF_Spreadsheet_Trial Condition=" '$(PkgInfragistics_WPF_Spreadsheet_Trial)' == '' ">C:\Users\kiryu\.nuget\packages\infragistics.wpf.spreadsheet.trial\22.1.40</PkgInfragistics_WPF_Spreadsheet_Trial>
+    <PkgExtended_Wpf_Toolkit Condition=" '$(PkgExtended_Wpf_Toolkit)' == '' ">C:\Users\kiryu\.nuget\packages\extended.wpf.toolkit\4.3.0</PkgExtended_Wpf_Toolkit>
+  </PropertyGroup>
+</Project>
